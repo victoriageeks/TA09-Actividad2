@@ -95,6 +95,7 @@ public class mainApp {
 		fjuegos[2]=new videojuego("Dragon Quest XI",48,"Fantasía"," Square Enix");
 		fjuegos[3]=new videojuego("FinalFantasy XV",32);
 		fjuegos[4]=new videojuego("Diablo III",52,"RPG","Blizzard");
+		System.out.println("Array de juegos creada");
 		return fjuegos;
 	}
 
@@ -107,7 +108,6 @@ public class mainApp {
 		fseries[3]=new Serie("Friends"," Kevin S. Bright");
 		fseries[4]=new Serie("How I Met Your Mother",9,"Comedia","Carter Bays");
 		System.out.println("Array de serie creada");
-		System.out.println("Array de juegos creada");
 		return fseries;
 	}
 	
