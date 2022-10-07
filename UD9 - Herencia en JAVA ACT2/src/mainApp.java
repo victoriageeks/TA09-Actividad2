@@ -9,9 +9,11 @@ public class mainApp {
 		videojuego[] juegos=creaArrayJuegos();
 		entregaSeries(series);
 		entregaJuegos(juegos);
-		devuelveSeries(series);
-		devuelveJuegos(juegos);
-		
+		int[] numentregados=compruebaEntregados(juegos,series);
+		System.out.println("El numero de juegos entregados es: "+numentregados[1]+
+				"\nEl numero de series entregadas es: "+numentregados[0]);
+		muestraSeries(series);
+		muestraJuegos(juegos);
 		
 		
 		
@@ -19,19 +21,52 @@ public class mainApp {
 		
 	}
 
-	private static void devuelveJuegos(videojuego[] juegos) {
-		// TODO Auto-generated method stub
-		juegos[2].devolver();
-		juegos[0].devolver();
-		juegos[3].devolver();
+	private static void muestraJuegos(videojuego[] juegos) {
+		int max= 0;
+
+		for (int i=1;i<juegos.length;i++) {
+			if(juegos[max].compareTo(juegos[i])>0) {
+				max=i;
+			}
+		}
+		System.out.println("El juego con mas horas estimadas es: "+juegos[max].getTitulo());
+		
 	}
 
-	private static void devuelveSeries(Serie[] series) {
+	private static void muestraSeries(Serie[] series) {
 		// TODO Auto-generated method stub
-		series[0].devolver();
-		series[1].devolver();
-		series[4].devolver();
+		int max=0;
 		
+		for (int i=1;i<series.length;i++) {
+			if(series[max].compareTo(series[i])>0) {
+				max=i;
+			}
+		}
+		System.out.println("La serie con mas temporadas es: "+series[max].getTitulo());
+	}
+
+	private static int[] compruebaEntregados(videojuego[] juegos, Serie[] series) {
+		// TODO Auto-generated method stub
+		int[] entregados=new int[2];
+		for(int i=0;i<series.length;i++) {
+			if(series[i].isEntregado()) {
+				entregados[0]+=1;
+				System.out.println("La serie "+series[i].getTitulo() + " está entregada.");
+				System.out.println("Procediendo a su devolución....");
+				series[i].devolver();
+				System.out.println("Serie devuelta con éxito");
+			}
+		}
+		for(int i=0;i<juegos.length;i++) {
+			if(juegos[i].isEntregado()) {
+				entregados[1]+=1;
+				System.out.println("El juego "+juegos[i].getTitulo() + " está entregado.");
+				System.out.println("Procediendo a su devolución....");
+				juegos[i].devolver();
+				System.out.println("Juego devuelto con éxito");
+			}
+		}
+		return entregados;
 	}
 
 	private static void entregaJuegos(videojuego[] juegos) {
