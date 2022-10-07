@@ -41,13 +41,13 @@ public class Serie implements Entregable{
 	}
 	
 	//método que me compara 2 series segun su numero de temporadas
-		public String compareTo(Serie a) {
+		public int compareTo(Serie a) {
 			if(this.num_de_temporadas == a.getNumDeTemporadas()){
-				return "El número de temporadas comparado es el mismo";
+				return 0;
 			}else if(this.num_de_temporadas > a.getNumDeTemporadas()) {
-				return "La serie "+this.titulo +" tiene más temporadas que " + a.getTitulo();
+				return -1;
 			}else {
-				return "La serie "+this.titulo +" tiene menos temporadas que " + a.getTitulo();
+				return 1;
 			}
 			
 		}
