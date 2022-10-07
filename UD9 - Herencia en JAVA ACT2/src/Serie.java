@@ -1,5 +1,5 @@
 
-public class Serie {
+public class Serie implements Entregable{
 	private String titulo;
 	private int num_de_temporadas;
 	private boolean entregado;
@@ -40,6 +40,17 @@ public class Serie {
 		this.creador = creador;
 	}
 	
+	//método que me compara 2 series segun su numero de temporadas
+		public String compareTo(Serie a) {
+			if(this.num_de_temporadas == a.getNumDeTemporadas()){
+				return "El número de temporadas comparado es el mismo";
+			}else if(this.num_de_temporadas > a.getNumDeTemporadas()) {
+				return "La serie "+this.titulo +" tiene más temporadas que " + a.getTitulo();
+			}else {
+				return "La serie "+this.titulo +" tiene menos temporadas que " + a.getTitulo();
+			}
+			
+		}
 	
 	// getters y setters
 	public String getTitulo() {
@@ -74,6 +85,24 @@ public class Serie {
 	public String toString() {
 		return ("Título de la serie: " +this.titulo+"\nNúmero de temporadas: "+ this.num_de_temporadas+"\nGénero: "+this.genero
                 +"\nEstado de entregado: "+this.entregado+"\nCreador: "+ this.creador);
+	}
+
+
+	@Override
+	public void entregar() {
+		this.entregado = true;
+	}
+
+
+	@Override
+	public void devolver() {
+		this.entregado = false;
+	}
+
+
+	@Override
+	public boolean isEntregado() {
+		return this.entregado;
 	}
 	
 	
