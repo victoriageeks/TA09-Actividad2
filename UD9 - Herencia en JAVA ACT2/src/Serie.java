@@ -83,7 +83,7 @@ public class Serie implements Entregable{
 	//método toString()
 	@Override
 	public String toString() {
-		return ("Título de la serie: " +this.titulo+"\nNúmero de temporadas: "+ this.num_de_temporadas+"\nGénero: "+this.genero
+		return (" --- SERIES --- \nTítulo: " +this.titulo+"\nNúmero de temporadas: "+ this.num_de_temporadas+"\nGénero: "+this.genero
                 +"\nEstado de entregado: "+this.entregado+"\nCreador: "+ this.creador);
 	}
 
