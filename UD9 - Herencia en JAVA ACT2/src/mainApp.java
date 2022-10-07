@@ -5,17 +5,23 @@ public class mainApp {
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		
+		
 		Serie[] series=creaArraysSeries();
+		System.out.println("");
 		videojuego[] juegos=creaArrayJuegos();
+		System.out.println("");
 		entregaSeries(series);
+		System.out.println("");
 		entregaJuegos(juegos);
+		System.out.println("");
 		int[] numentregados=compruebaEntregados(juegos,series);
 		System.out.println("El numero de juegos entregados es: "+numentregados[1]+
 				"\nEl numero de series entregadas es: "+numentregados[0]);
+		System.out.println("");
 		muestraSeries(series);
+		System.out.println("");
 		muestraJuegos(juegos);
-		
-		
+		System.out.println("");		
 		
 		
 		
@@ -29,7 +35,7 @@ public class mainApp {
 				max=i;
 			}
 		}
-		System.out.println("Mostrando juegos con más horas estimadas....\n\n "+juegos[max]);
+		System.out.println("Mostrando juegos con más horas estimadas....\n\n"+juegos[max]);
 		
 	}
 
