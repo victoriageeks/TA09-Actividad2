@@ -29,7 +29,7 @@ public class mainApp {
 				max=i;
 			}
 		}
-		System.out.println("El juego con mas horas estimadas es: "+juegos[max].getTitulo());
+		System.out.println("Mostrando juegos con más horas estimadas....\n "+juegos[max]);
 		
 	}
 
@@ -42,7 +42,7 @@ public class mainApp {
 				max=i;
 			}
 		}
-		System.out.println("La serie con mas temporadas es: "+series[max].getTitulo());
+		System.out.println("Mostrando serie con mas temporadas.....\n"+series[max]);
 	}
 
 	private static int[] compruebaEntregados(videojuego[] juegos, Serie[] series) {
@@ -71,21 +71,24 @@ public class mainApp {
 
 	private static void entregaJuegos(videojuego[] juegos) {
 		// TODO Auto-generated method stub
-		
+		System.out.println("Entregando juegos....");
 		juegos[2].entregar();
 		juegos[0].entregar();
 		juegos[3].entregar();
+		System.out.println("Juegos entregados.");
 	}
 
 	private static void entregaSeries(Serie[] series) {
 		// TODO Auto-generated method stub
+		System.out.println("Entregando series...");
 		series[0].entregar();
 		series[1].entregar();
 		series[4].entregar();
+		System.out.println("Series entregadas.");
 	}
 
 	private static videojuego[] creaArrayJuegos() {
-		
+		System.out.println("Creando array de juegos...");
 		videojuego[] fjuegos = new videojuego[5];
 		fjuegos[0]=new videojuego();
 		fjuegos[1]=new videojuego("Grand Theft Auto V",24);
@@ -96,14 +99,15 @@ public class mainApp {
 	}
 
 	private static Serie[] creaArraysSeries() {
-		
+		System.out.println("Creando array de series...");
 		Serie[] fseries = new Serie[5];
 		fseries[0]=new Serie();
 		fseries[1]=new Serie("The Big Bang Theory","Chuck Lorre");
 		fseries[2]=new Serie("Game of Thrones",8,"Fantasía","David Benioff");
 		fseries[3]=new Serie("Friends"," Kevin S. Bright");
 		fseries[4]=new Serie("How I Met Your Mother",9,"Comedia","Carter Bays");
-		
+		System.out.println("Array de serie creada");
+		System.out.println("Array de juegos creada");
 		return fseries;
 	}
 	
