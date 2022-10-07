@@ -87,36 +87,45 @@ public class videojuego implements Entregable{
 
 	@Override
 	public void entregar() {
-		// TODO Auto-generated method stub
-		
+		this.entregado=true;
 	}
 
 
 
 	@Override
 	public void devolver() {
-		// TODO Auto-generated method stub
-		
+		this.entregado=false;
 	}
 
 
 
 	@Override
 	public boolean isEntregado() {
-		// TODO Auto-generated method stub
-		return false;
+		return this.entregado;
 	}
 	
 	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
+	public int compareTo (videojuego v) {
+		if (v.getHorasEstimadas() == (this.horasEstimadas) ) {
+			return 0;
+		}else if (v.getHorasEstimadas() < (this.horasEstimadas)){
+			return -1;
+
+		}else{
+			return 1;
+		}
+	}
 }
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+
