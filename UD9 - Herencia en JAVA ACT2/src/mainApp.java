@@ -29,7 +29,7 @@ public class mainApp {
 				max=i;
 			}
 		}
-		System.out.println("Mostrando juegos con más horas estimadas....\n "+juegos[max]);
+		System.out.println("Mostrando juegos con más horas estimadas....\n\n "+juegos[max]);
 		
 	}
 
@@ -42,7 +42,7 @@ public class mainApp {
 				max=i;
 			}
 		}
-		System.out.println("Mostrando serie con mas temporadas.....\n"+series[max]);
+		System.out.println("Mostrando serie con mas temporadas.....\n\n"+series[max]);
 	}
 
 	private static int[] compruebaEntregados(videojuego[] juegos, Serie[] series) {
