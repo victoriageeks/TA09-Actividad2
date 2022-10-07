@@ -1,5 +1,5 @@
 
-public class videojuego {
+public class videojuego implements Entregable{
 	//Atributos
 	private String titulo="";
 	private int horasEstimadas=10;
@@ -81,6 +81,30 @@ public class videojuego {
 	public String toString() {
 		return "videojuego [titulo=" + titulo + ", horasEstimadas=" + horasEstimadas + ", entregado=" + entregado
 				+ ", genero=" + genero + ", compania=" + compania + "]";
+	}
+
+
+
+	@Override
+	public void entregar() {
+		// TODO Auto-generated method stub
+		
+	}
+
+
+
+	@Override
+	public void devolver() {
+		// TODO Auto-generated method stub
+		
+	}
+
+
+
+	@Override
+	public boolean isEntregado() {
+		// TODO Auto-generated method stub
+		return false;
 	}
 	
 	
