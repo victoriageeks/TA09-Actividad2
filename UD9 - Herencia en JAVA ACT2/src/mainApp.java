@@ -60,7 +60,7 @@ public class mainApp {
 				System.out.println("La serie "+series[i].getTitulo() + " está entregada.");
 				System.out.println("Procediendo a su devolución....");
 				series[i].devolver();
-				System.out.println("Serie devuelta con éxito");
+				System.out.println("Serie devuelta con éxito\n");
 			}
 		}
 		for(int i=0;i<juegos.length;i++) {
@@ -69,7 +69,7 @@ public class mainApp {
 				System.out.println("El juego "+juegos[i].getTitulo() + " está entregado.");
 				System.out.println("Procediendo a su devolución....");
 				juegos[i].devolver();
-				System.out.println("Juego devuelto con éxito");
+				System.out.println("Juego devuelto con éxito\n");
 			}
 		}
 		return entregados;
